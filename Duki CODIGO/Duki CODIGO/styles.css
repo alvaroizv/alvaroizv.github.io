@@ -1,0 +1,879 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@font-face {
+  font-family: "Coolvetica";
+  src: url(assets/fonts/Coolvetica\ Rg\ Cond.otf);
+}
+
+:root {
+  --dark: #000000;
+  --light: #ffffff;
+  --dark_red: #72191c;
+  --red: #ff0000;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url(assets/fonts/nexa-regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn {
+  width: 190px;
+  height: 64px;
+  font-family: Rubik;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  color: white;
+  background-color: var(--red);
+  border: 4px solid var(--light);
+}
+
+.btn-secondary {
+  color: var(--light);
+  background-color: var(--dark);
+  border: 4px solid var(--red);
+}
+
+.title {
+  text-transform: uppercase;
+  color: white;
+  padding: 3rem;
+  font-family: Rubik;
+  font-size: clamp(2rem, -1.8rem + 7.111vw, 3rem);
+
+  font-weight: 700;
+}
+
+.red {
+  color: var(--dark_red);
+}
+
+/*-----------------------------------------------HERO SECTION-----------------------*/
+header {
+  background-color: var(--dark);
+  color: var(--light);
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  z-index: 9;
+  position: relative;
+
+  .logo {
+    height: 40px;
+    width: 40px;
+    background-image: url(assets/img/logoBlanco.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center center;
+    margin-left: 1.2rem;
+  }
+
+  nav {
+    padding-right: 1.2rem;
+    .hero-nav {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 4rem;
+
+      li a {
+        cursor: pointer;
+        font-size: 1.6rem;
+        font-family: Coolvetica;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--light);
+      }
+    }
+  }
+}
+
+.hero-content {
+  z-index: 1;
+  position: relative;
+  height: calc(100vh - 160px);
+  background-image: url(assets/img/herobg.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .wings {
+    position: absolute;
+    height: 350px;
+    width: 150px;
+    top: 55px;
+    left: 487px;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    color: var(--light);
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-family: Coolvetica;
+      font-size: 24rem;
+      margin-top: 6rem;
+      letter-spacing: 1.2rem;
+    }
+
+    p {
+      margin-bottom: 3rem;
+      font-family: Rubik;
+      font-size: 1.5rem;
+    }
+
+    p span {
+      font-weight: 700;
+    }
+  }
+
+  .arrow-flex {
+    margin-bottom: 4.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+
+    .arrow {
+      padding: 0.4rem;
+      background-color: var(--red);
+      border: 4px solid var(--light);
+      border-radius: 10px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+/*-----------------------------------------------BIOGRAPHY-----------------------*/
+
+.biography-container {
+  background-color: var(--dark);
+  color: var(--light);
+
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  justify-content: start;
+
+  gap: 4rem;
+
+  div:nth-child(3) {
+    flex-flow: row-reverse nowrap;
+  }
+
+  .biographies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem 4rem;
+    margin: 0 auto;
+    width: 85%;
+
+    padding-bottom: 1.2rem;
+
+    .text1 {
+      flex: 1;
+
+      font-family: Nexa;
+      font-size: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+
+      h1 {
+        color: var(--red);
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      p:nth-of-type(2) {
+        margin-top: 1.4rem;
+      }
+    }
+
+    .img1 {
+      flex: 2;
+      background-image: url(assets/img/Biography1.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right center;
+      aspect-ratio: 3/2;
+    }
+
+    .img2 {
+      flex: 2;
+      background-image: url(assets/img/Biography2.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left center;
+      aspect-ratio: 37 / 27;
+    }
+
+    .img3 {
+      flex: 2;
+      background-image: url(assets/img/Biography3.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right center;
+      aspect-ratio: 1 / 1;
+    }
+  }
+}
+/*-----------------------------------------------ALBUMS-----------------------*/
+.albums {
+  background-color: var(--dark_red);
+
+  .card-container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 8rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+
+    .card-basis {
+      flex: 1;
+      background-color: var(--dark);
+      border-radius: 23px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+
+      .card-image {
+        padding: 2rem;
+
+        img {
+          height: 200px;
+          width: 200px;
+        }
+      }
+
+      .card-text {
+        font-family: Rubik;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: white;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+
+        padding-bottom: 1rem;
+      }
+
+      .btn-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        margin-bottom: 1rem;
+
+        .disk-image {
+          background-image: url(assets/img/mini_disk.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          width: 65px;
+          aspect-ratio: 1/1;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------ALBUMS//DEPLOYED-----------------------*/
+.albums-detail {
+  background-color: var(--dark);
+
+  .album-flex {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .album-deploy {
+    display: flex;
+    color: var(--light);
+    align-content: center;
+    justify-content: center;
+    gap: 4rem;
+
+    .album-deploy-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Rubik;
+      color: white;
+
+      .paragraphs {
+        padding: 2rem;
+        font-size: 1.2rem;
+        margin-left: 3rem;
+        flex: 1;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        .logos {
+          padding: 1rem;
+
+          .logos-container {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+
+            gap: 1rem;
+
+            img {
+              width: 50px;
+              height: 50px;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+
+    .img-expanded {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      img {
+        margin-top: 3rem;
+        width: 100%;
+        aspect-ratio: 1/1;
+        margin-left: 3rem;
+
+        padding: 2rem;
+      }
+    }
+    .spotify-tracks {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column nowrap;
+      gap: 2rem;
+      flex: 1;
+
+      margin-bottom: 3rem;
+      .title {
+        letter-spacing: 0.1rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+/*-----------------------------------------------OUTSTANDING ALBUM-----------------------*/
+.outstanding {
+  background-color: var(--dark_red);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .outstanding-container {
+    background-image: url(assets/img/Acartonado.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 85%;
+    padding: 3rem;
+    margin: 3rem auto 0;
+    gap: 2rem;
+
+    h1 {
+      font-family: Nexa;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    .outstanding-card {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem;
+      gap: 4rem;
+
+      img {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .full-album {
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column nowrap;
+      }
+
+      .spotify-outstanding {
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column nowrap;
+      }
+    }
+
+    .outstanding-card:nth-of-type(2) {
+      flex-flow: row-reverse nowrap;
+    }
+
+    .outstanding-card:nth-of-type(3) {
+      margin-top: 3rem;
+    }
+  }
+}
+
+/*-----------------------------------------------ON TOUR-----------------------*/
+
+.tour {
+  background-color: black;
+  padding-top: 3rem;
+
+  .tour-content {
+    width: 85%;
+    margin: 0 auto;
+
+    .tour-img {
+      background-image: url(assets/img/dukiOnTour.webp);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      aspect-ratio: 16/9;
+    }
+
+    .tour-rows {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+
+      padding: 4rem;
+      .tour-dating {
+        border: 2px solid #72191c;
+        padding: 1rem;
+        width: 85%;
+        margin-top: 2rem;
+        display: flex;
+        flex-flow: row;
+        color: white;
+        align-items: center;
+        justify-content: space-between;
+
+        font-weight: 700;
+        font-family: Nexa;
+        font-size: 1.5rem;
+
+        > p {
+          text-align: center;
+        }
+
+        .place-info {
+          width: 10%;
+          p:nth-child(2) {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .tour-video {
+        width: 50vw;
+        height: 25vw;
+        border: 1px solid yellow;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        .title {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------------------------MERCH-----------------------*/
+.merch {
+  background-color: var(--dark_red);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .merch-container {
+    padding: 2rem;
+    gap: 1.9rem;
+    width: 85%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    .merch-card {
+      gap: 1rem;
+      flex: 1;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      flex-flow: column nowrap;
+
+      .merch-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        padding: 1rem;
+      }
+
+      .lower-card {
+        border-radius: 23px;
+        padding: 1rem;
+        margin-left: 1.1rem;
+        flex: 1;
+        background-color: var(--light);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-flow: column nowrap;
+
+        .lower-text {
+          font-family: Rubik;
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+
+          .product-name {
+            flex: 1 0 130px;
+            padding: 0.25rem;
+          }
+
+          .product-price {
+            flex: 1;
+            margin-left: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+/*-----------------------------------------------CONTACT-----------------------*/
+.contact {
+  background-image: url(assets/img/copiadukirojo.PNG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  aspect-ratio: 2.45/1;
+
+  .title {
+    padding-left: 0;
+  }
+
+  .contact-container {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-flow: column nowrap;
+
+    margin-left: 4rem;
+
+    gap: 1rem;
+
+    .contact-form {
+      width: 25%;
+
+      form {
+        flex: 1;
+        gap: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-flow: column nowrap;
+        width: 100%;
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 100%;
+          background-color: transparent;
+          border: 4px solid var(--light);
+          padding: 18px;
+          font-family: Nexa;
+
+          &::placeholder {
+            color: white;
+            opacity: 0.6;
+            text-transform: uppercase;
+          }
+
+          &:focus {
+            border: 4px solid var(--dark);
+            outline: none;
+          }
+
+          textarea {
+            height: 300px;
+            resize: vertical;
+          }
+        }
+
+        .form-footer {
+          margin-bottom: 4rem;
+          flex: 1;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+
+          margin-right: 4rem;
+
+          .privacy {
+            font-family: Nexa;
+            font-size: 1.2rem;
+            display: flex;
+            padding: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+          }
+
+          .form-btn {
+            margin-top: 0.5rem;
+            margin-right: 2rem;
+          }
+
+          input[type="checkbox"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border: 4px solid var(--light);
+
+            &:checked {
+              background-color: var(--dark);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*-----------------------------------------------FOOTER-----------------------*/
+
+.footer {
+  .footer-container {
+    padding-top: 3rem;
+    padding: 4rem;
+    background-color: var(--dark);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .footer-brand {
+      flex: 1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .footer-img {
+        background-image: url(assets/img/logoBlanco.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .footer-nav {
+      font-family: Coolvetica;
+      flex: 1;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+
+      gap: 1.5rem;
+
+      list-style: none;
+
+      li {
+        line-height: 0.9;
+      }
+      li a {
+        font-size: clamp(4rem, 2.571rem + 2.857vw, 6rem);
+        color: var(--light);
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .biography-container {
+    div:nth-child(3) {
+      flex-direction: column-reverse !important;
+    }
+
+    .bio-title {
+      margin-top: 6rem;
+    }
+
+    .biographies {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+
+      .text1 {
+        width: 80%;
+        margin-bottom: 2.5rem;
+      }
+      .img1,
+      .img2,
+      .img3 {
+        width: 80%;
+      }
+    }
+  }
+
+  .album-flex {
+    .album-deploy {
+      border: 1px solid green;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 80%;
+
+      .img-expanded {
+        width: 100%;
+        order: -1;
+
+        img {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .outstanding {
+    .outstanding-container {
+      .outstanding-card:nth-of-type(2) {
+        flex-direction: column;
+      }
+
+      .outstanding-card {
+        flex-direction: column;
+
+        img {
+          width: 100%;
+        }
+
+        .spotify-outstanding {
+          width: 100%;
+        }
+
+        .full-album {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .tour {
+    .tour-content {
+      width: 100%;
+      .tour-rows {
+        margin-top: 2rem;
+        width: 100%;
+        padding: 0;
+
+        .tour-video {
+          width: 90%;
+          height: 50vw;
+        }
+      }
+    }
+  }
+
+  .contact {
+    .contact-container {
+      .contact-form {
+        form {
+          width: 50vw;
+        }
+      }
+    }
+  }
+
+  .footer {
+    .footer-container {
+      flex-direction: column;
+      column-gap: 3rem;
+
+      .footer-brand {
+        padding: 4rem;
+      }
+
+      .footer-nav {
+        padding: 2rem;
+      }
+    }
+  }
+}
